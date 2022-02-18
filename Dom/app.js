@@ -57,11 +57,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let ul = document.getElementById("ul");
   let i = 0;
   friendBtn.addEventListener("click", function () {
+    if (i < friendsArr.length){
     // for (let i = 0; i < friendsArr.length; i++) {
     let li = document.createElement("li");
     let name = document.createTextNode(friendsArr[i]);
     li.appendChild(name);
     ul.appendChild(li);
-    i++;
+    i++}
+    else {alert("You got no more friends!")}
   });
 });
